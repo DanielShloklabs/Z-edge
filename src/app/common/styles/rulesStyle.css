@@ -1,0 +1,78 @@
+.rules {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.rulesLeft {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rulesConstantPopup {
+  position: fixed;
+  top: 50%;
+  left: 71%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.rulesSavePopup {
+  position: fixed;
+  top: 40%;
+  right: 53%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.rulesConstantPopup input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid #928e8e;
+  border-radius: 3px;
+}
+.rulesSavePopup input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid #928e8e;
+  border-radius: 3px;
+}
+.rulesConstantPopup button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.rulesSavePopup button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.rulesConstantPopup button:hover {
+  background-color: #29292a;
+}
+.rulesSavePopup button:hover {
+  background-color: #29292a;
+}

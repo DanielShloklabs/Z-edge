@@ -1,0 +1,28 @@
+.widgets {
+  width: 15%;
+  height: 90vh;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.widgets.dark {
+  background-color: var(--dark-secondary-color);
+}
+
+.widgetsHeader {
+  background-color: #c2e7ff;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+}
+.widgetsHeader.dark {
+  background-color: #d1e5fb;
+  color: var(--dark-background-color);
+}
+.widgetsContent {
+  display: flex;
+  height: 90%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

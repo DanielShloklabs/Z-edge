@@ -1,0 +1,35 @@
+.configurationSettingsNetworkOption {
+    display: flex;
+    background-color: var(--light-background-color);
+    padding: 15px;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+    width: 300px;
+  }
+  .configurationSettingsNetworkOption.dark {
+    background-color: var(--dark-background-color);
+  }
+  .configurationSettingsNetworkOptionInputGroup {
+    display: inline;
+  }
+  .configurationSettingsNetworkOptionInputGroup label {
+    float: inline-start;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  .nEnable {
+      float: none!important;
+      margin-left: -130px;
+      background-color: var(--light-background-color);
+  }
+  .configurationSettingsNetworkOptionInputGroup input {
+    float: right;
+    outline: none;
+    background-color: var(--input-background-color);
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+  }

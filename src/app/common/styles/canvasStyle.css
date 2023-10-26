@@ -1,0 +1,13 @@
+.canvas {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+
+.canvas.dark {
+  background-color: var(--dark-secondary-color);
+}

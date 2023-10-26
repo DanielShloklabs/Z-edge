@@ -1,0 +1,52 @@
+.trendNavigator {
+    width: 15%;
+    height: 90vh;
+    border-radius: 20px;
+    background-color: #eaf1fb;
+  }
+  .trendNavigator.dark {
+    background-color: var(--dark-secondary-color);
+  }
+  .trendNavigatorHeader {
+    background-color: #c2e7ff;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .trendNavigatorHeader.dark {
+    background-color: #d1e5fb;
+    color: var(--dark-background-color);
+  }
+  .objectList {
+    text-align: left;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  .trendNavigatorContent {
+    width: 100%;
+    height: 80vh;
+    overflow: scroll;
+  }
+  .device {
+    font-size: 16px;
+    margin-left: -140px;
+    font-weight: 600;
+  }
+  .ul {
+    list-style: none;
+    width: 100%;
+    margin-left: -50px;
+    font-size: 14px;
+  }
+  .objects {
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10px;
+    overflow: scroll;
+    gap: 2px;
+    border-left: 2px solid #bbbbbb;
+  }
+  

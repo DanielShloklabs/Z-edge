@@ -1,0 +1,60 @@
+.ruleCanvas {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+
+.ruleCanvas.dark {
+  background-color: var(--dark-secondary-color);
+}
+
+.react-flow__attribution a {
+  display: none;
+}
+.ruleCanvasSaveBtn {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 160px;
+  background-color: white;
+  color: var(--black-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ruleCanvasSaveBtn:hover {
+  background-color: #f3f3f3;
+}
+.ruleCanvasClearNodesBtn {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 10px;
+  background-color: white;
+  color: var(--black-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ruleCanvasClearNodesBtn:hover {
+  background-color: #f3f3f3;
+}
+.react-flow__controls-button {
+  padding: 5px;
+  margin-top: 10px;
+  background-color: white;
+  color: var(--font-color) !important;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ruleCanvasControls {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}

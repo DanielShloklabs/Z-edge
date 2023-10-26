@@ -1,0 +1,19 @@
+.role {
+  display: flex;
+  flex-direction: row;
+}
+.roleName {
+  /* margin-right: 50px; */
+  width: 100px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.roleCheckBoxes {
+  display: flex;
+  gap: 67px;
+  margin-left: 100px;
+}
+.roleReadWrite input{
+    margin-left: -2px;
+}

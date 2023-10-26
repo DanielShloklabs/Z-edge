@@ -1,0 +1,25 @@
+.usersTable {
+    width: 96%;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #eaf1fb!important;
+}
+.usersTable.dark {
+    background-color: var(--dark-secondary-color)!important;
+}
+.usersTableData.dark {
+    color: white;
+    
+}
+.usersTableHeader {
+    background-color: #d3e3fd!important;
+    font-weight: 700!important;
+    font-size: 16px!important;
+}
+.usersTableHeader.dark {
+    background-color: #d3e3fd;
+}
+.usersTablePagination.dark {
+    background-color: #d3e3fd;
+}

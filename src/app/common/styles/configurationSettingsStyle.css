@@ -1,0 +1,13 @@
+.configurationSettings {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 90vh;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.configurationSettings.dark {
+  background-color: var(--dark-secondary-color);
+}

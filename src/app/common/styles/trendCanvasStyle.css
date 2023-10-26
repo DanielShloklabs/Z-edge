@@ -1,0 +1,18 @@
+.trendCanvas {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 90vh;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.trendCanvas p {
+  text-align: left;
+  margin-left: 30px;
+  font-weight: 600;
+}
+.trendCanvas.dark {
+  background-color: var(--dark-secondary-color);
+}

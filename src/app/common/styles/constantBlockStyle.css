@@ -1,0 +1,41 @@
+.constantBlock {
+    width: 15%;
+    height: 90vh;
+    border-radius: 20px;
+    background-color: #eaf1fb;
+  }
+  .constantBlock.dark {
+    background-color: var(--dark-secondary-color);
+  }
+  
+  .constantBlockHeader {
+    background-color: #c2e7ff;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .constantBlockHeader.dark {
+    background-color: #d1e5fb;
+    color: var(--dark-background-color);
+  }
+  .constantBlockContent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .constantBlocks {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    gap: 10px;
+    margin-left: 60px;
+    flex-direction: column;
+    background-color: none;
+  }
+  .constantBlockOperator {
+    font-weight: 600;
+    cursor: pointer;
+  }

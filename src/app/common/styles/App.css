@@ -1,0 +1,48 @@
+:root {
+  --primary-color: #4a96f2;
+  --secondary-color: #98cafa;
+  --background-color: #f6f8fc;
+  --font-color: #127096;
+  --light-background-color: #d3e3fd;
+  --light-heading-color: #c2e7ff;
+  --input-background-color: #eaf1fb;
+  --light-green-color:#04aa6d;
+  --light-red-color:#ff0000;
+  --light-button-color: #d1e5fb;
+  --black-color:#000;
+  --dark-secondary-color: #232220;
+  --dark-background-color: #100e0e;
+  --font-stack: "Poppins", sans-serif;
+  --base-font-size: 16px;
+  --react-international-phone-country-selector-background-color: transparent;
+  --react-international-phone-country-selector-background-color-hover: transparent;
+  --react-international-phone-disabled-country-selector-background-color: transparent;
+  --react-international-phone-country-selector-border-color: none;
+  --base-font-weight: 500;
+  user-select: none;
+  /* --dark-secondary-color: #373740;
+  --dark-background-color: #33333d; */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--font-stack);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+}
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: white;
+  font-family: var(--font-stack);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+}
+.App {
+  display: flex;
+}
+.Content {
+  width: 100%;
+}

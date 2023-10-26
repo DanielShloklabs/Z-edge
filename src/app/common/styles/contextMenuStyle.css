@@ -1,0 +1,22 @@
+.context-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 999; /* Ensure the menu appears on top of other elements */
+  }
+  
+  .context-menu button {
+      border: none;
+      display: block;
+      padding: 0.5em;
+      text-align: left;
+      width: 100%;
+  }
+  
+  
+  .context-menu button:hover {
+      background: white;
+  }

@@ -1,0 +1,30 @@
+.ruleList {
+  width: 100%;
+  height: 30vh;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.ruleList.dark {
+  background-color: var(--dark-secondary-color);
+}
+.ruleListHeader {
+  background-color: #c2e7ff;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+}
+.ruleListHeader.dark {
+  background-color: #d1e5fb;
+  color: var(--dark-background-color);
+}
+.ruleListContent{
+  overflow: scroll;
+  height: 80%;
+}
+li {
+  list-style: none;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.mathBlock {
+  width: 15%;
+  height: 90vh;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.mathBlock.dark {
+  background-color: var(--dark-secondary-color);
+}
+
+.mathBlockHeader {
+  background-color: #c2e7ff;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+}
+.mathBlockHeader.dark {
+  background-color: #d1e5fb;
+  color: var(--dark-background-color);
+}
+.mathBlockContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.mathBlocks {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  gap: 10px;
+  margin-left: 60px;
+  flex-direction: column;
+  background-color: none;
+}
+.mathBlockOperator {
+  font-weight: 600;
+  cursor: pointer;
+}

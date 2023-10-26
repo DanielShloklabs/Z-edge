@@ -1,0 +1,28 @@
+.alarmTable {
+  width: 96%;
+  height: 80%;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  background-color: #eaf1fb !important;
+}
+.alarmTable.dark {
+  background-color: var(--dark-secondary-color) !important;
+}
+.alarmTableData.dark {
+  color: white;
+}
+.alarmTableHeader {
+  background-color: #d3e3fd !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+.alarmTableHeader.dark {
+  background-color: #d3e3fd;
+}
+.alarmTablePagination.dark {
+  background-color: #d3e3fd;
+}

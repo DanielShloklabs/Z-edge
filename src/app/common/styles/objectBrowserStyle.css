@@ -1,0 +1,59 @@
+.objectBrowser {
+  width: 100%;
+  height: 60vh;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.objectBrowser.dark {
+  background-color: var(--dark-secondary-color);
+}
+.objectBrowserHeader {
+  display: flex;
+  background-color: #c2e7ff;
+  padding: 10px;
+  font-weight: 600;
+  gap: 10px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+}
+.objectBrowserHeader.dark {
+  background-color: #d1e5fb;
+  color: var(--dark-background-color);
+}
+.objectBrowserRefresh {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.objectList {
+  text-align: left;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.objectBrowserContent {
+  width: 100%;
+  height: 50vh;
+  overflow: scroll;
+}
+.device {
+  font-size: 16px;
+  margin-left: -140px;
+  font-weight: 600;
+}
+.ul {
+  list-style: none;
+  width: 100%;
+  margin-left: -50px;
+  font-size: 14px;
+}
+.objects {
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10px;
+  overflow: scroll;
+  gap: 2px;
+  border-left: 2px solid #bbbbbb;
+}

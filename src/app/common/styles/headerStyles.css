@@ -1,0 +1,90 @@
+.header {
+  /* position: fixed; */
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-evenly;
+}
+.header-logo {
+  width: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5px;
+}
+.logo {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+}
+.logoStart {
+  padding: 10px;
+  font-weight: 900;
+  background-color: var(--secondary-color);
+}
+.logoStart.dark {
+    background-color: #d1e5fb;
+    color: black;
+}
+.logoEnd {
+  font-weight: 900;
+  padding: 10px;
+}
+.logoEnd .dark {
+  background-color: var(--dark-secondary-color);
+}
+.search {
+  width: 20%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.search .dark {
+  background-color: var(--dark-secondary-color);
+  color: white;
+}
+.search .dark::placeholder {
+  color: rgb(223, 222, 222);
+}
+.searchBox {
+  background-color: #eaf1fb;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  border-radius: 50px;
+}
+
+.searchIcon {
+  width: 20%;
+}
+.searchInput {
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  margin: auto;
+}
+.header-profile-section {
+  width: 80%;
+  display: flex;
+  margin-right: 50px;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
+}
+.header-profile {
+    display: flex;
+    gap: 10px;
+}
+.profileIcon {
+    width: 500px;
+    margin: auto;
+}
+.profileName {
+    font-size: 18px;
+    font-weight: 500;
+}
+.dark {
+    color: white;
+}

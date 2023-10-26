@@ -1,0 +1,14 @@
+.customButton {
+    width: fit-content;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}

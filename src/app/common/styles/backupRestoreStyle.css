@@ -1,0 +1,22 @@
+.backupRestore {
+  display: flex;
+  margin-bottom: 10px;
+}
+.backupRestoreConfig {
+  display: flex;
+  gap: 50px;
+}
+.backupRestoreConfigBtns {
+  display: flex;
+  gap: 5px;
+}
+.backupRestoreConfigBtn {
+  background-color: var(--font-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  padding-top: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}

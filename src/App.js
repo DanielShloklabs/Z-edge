@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app/common/styles/App.css";
+import { useAuth } from "./app/common/utils/authContext";
+import Header from "./app/features/core/header/header";
+import SideNav from "./app/features/core/sidebar/sidebar";
+import Login from "./app/features/pages/login/presentation/login";
+
+import AppRoutes from "./app/routes/routes";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 
 function App() {
+  const { isLoggedIn } = useAuth();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        {isLoggedIn ? (
+          <div className="App">
+            <SideNav />
+            <div className="Content">
+              <Header />
+              <AppRoutes />
+            </div>
+          </div>
+        ) : (
+          <>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+            </Routes>
+            <Navigate to="/login" />
+          </>
+        )}
+      </Router>
     </div>
   );
 }

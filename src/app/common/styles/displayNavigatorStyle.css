@@ -1,0 +1,27 @@
+.displayNavigator {
+  width: 15%;
+  height: 90vh;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.displayNavigator.dark {
+  background-color: var(--dark-secondary-color);
+}
+.displayNavigatorHeader {
+  background-color: #c2e7ff;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+}
+.displayNavigatorHeader.dark {
+  background-color: #d1e5fb;
+  color: var(--dark-background-color);
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
