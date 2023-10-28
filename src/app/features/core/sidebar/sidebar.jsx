@@ -5,6 +5,7 @@ import EdgesensorHighTwoToneIcon from "@mui/icons-material/EdgesensorHighTwoTone
 import EventNoteTwoToneIcon from "@mui/icons-material/EventNoteTwoTone";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import SettingsIcon from "@mui/icons-material/Settings";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import React from "react";
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import "../../../common/styles/sidebarStyle.css";
@@ -78,6 +79,17 @@ const SideNav = () => {
           </Link>
         </MenuItem>
         <p className="sidenavMenuText">Rules</p>
+
+        <MenuItem className={`sidenavMenuItem ${isDarkMode ? "dark" : ""}`}>
+          <Link to="/schedule">
+            <CalendarMonthIcon
+              className={`sidenavMenuIcon ${
+                isDarkMode ? "dark" : ""
+              } ${isActiveLink("/schedule")}`}
+            />
+          </Link>
+        </MenuItem>
+        <p className="sidenavMenuText long">Schedule</p>
 
         <Link to="/settings" style={{ color: "var(--font-color)" }}>
           <SettingsIcon

@@ -3,6 +3,7 @@ import { useTheme } from "../../../../../common/theme/themeContext";
 import "../../../../../common/styles/backupRestoreSettingsStyle.css";
 import BackupRestore from "./backupRestore.jsx";
 import { GoDotFill } from "react-icons/go";
+import formatCurrentDateTime from "../../../../../common/utils/formattedDateTime";
 
 const BackupRestoreSettings = () => {
   const { isDarkMode } = useTheme();
@@ -29,7 +30,7 @@ const BackupRestoreSettings = () => {
           />
           <div className="backupRestoreLastBackupTime">
             <p>Last Backup Time</p>
-            <p>{Date.now()}</p>
+            <p>{formatCurrentDateTime()}</p>
           </div>
           <div className="backupRestoreLastBackupStatus">
             <p className="backupRestoreStatusLabel">Last Backup Status</p>
@@ -55,7 +56,7 @@ const BackupRestoreSettings = () => {
           />
           <div className="backupRestoreLastBackupTime">
             <p>Last Backup Time</p>
-            <p>{Date.now()}</p>
+            <p>{formatCurrentDateTime()}</p>
           </div>
           <div className="backupRestoreLastBackupStatus">
             <p className="backupRestoreStatusLabel">Last Backup Status</p>

@@ -1,14 +1,6 @@
 .devices {
   display: flex;
-  flex-grow: 1;
-  height: 90vh;
-  margin-right: 10px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  background-color: #eaf1fb;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
 }
-.devices.dark {
-    background-color: var(--dark-secondary-color);
-  }

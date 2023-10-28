@@ -1,0 +1,31 @@
+.pointDetailsTrendsContent {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .pointDetailsTrendsGroup {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .pointDetailsTrendsLabel {
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .pointDetailsTrendsData {
+    text-align: center;
+    width: 20%;
+    font-size: 18px;
+    display: flex; 
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--light-button-color);
+  }

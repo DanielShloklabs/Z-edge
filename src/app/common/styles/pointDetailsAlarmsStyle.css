@@ -1,0 +1,30 @@
+.pointDetailsAlarmsContent {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .pointDetailsAlarmsGroup {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .pointDetailsAlarmsLabel {
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .pointDetailsAlarmsData {
+    text-align: center;
+    font-size: 18px;
+    display: flex; 
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--light-button-color);
+  }

@@ -6,7 +6,7 @@
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    color: black;
+    color: var(--black-color);
     font-weight: 700;
     border-radius: 20px;
     background-color: var(--primary-color);

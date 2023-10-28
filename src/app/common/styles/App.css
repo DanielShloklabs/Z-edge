@@ -12,6 +12,7 @@
   --black-color:#000;
   --dark-secondary-color: #232220;
   --dark-background-color: #100e0e;
+  --button-border-radius:10px;
   --font-stack: "Poppins", sans-serif;
   --base-font-size: 16px;
   --react-international-phone-country-selector-background-color: transparent;

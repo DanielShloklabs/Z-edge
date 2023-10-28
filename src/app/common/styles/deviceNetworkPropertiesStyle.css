@@ -1,0 +1,86 @@
+.deviceNetworkProperties {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 90vh;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.deviceNetworkProperties.dark {
+  background-color: var(--dark-secondary-color);
+}
+.deviceNetworkPropertiesHeaderGroup {
+    display: flex;
+}
+.deviceNetworkPropertiesHeader.devices {
+    cursor: pointer;
+    background-color: var(--light-button-color);
+}
+.deviceNetworkPropertiesHeader {
+  width: fit-content;
+  background-color: #c2e7ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+}
+.deviceNetworkPropertiesHeader.dark {
+  background-color: #d1e5fb;
+  color: var(--dark-background-color);
+}
+.deviceNetworkPropertiesContent {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.deviceNetworkPropertiesGroup {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.deviceNetworkPropertyLabel {
+  flex: 1.5;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.deviceNetworkPropertyData {
+  flex: 2;
+  text-align: left;
+  font-size: 18px;
+}
+.deviceNetworkPropertiesBtnsGroup {
+  display: flex;
+  margin-top: 50px;
+  width: 35%;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.deviceNetworkPropertiesBtn {
+  background-color: var(--light-button-color);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.deviceNetworkPropertiesBtn.dark {
+  color: var(--black-color);
+}

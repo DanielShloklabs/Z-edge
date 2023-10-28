@@ -1,0 +1,88 @@
+.deviceNetwork {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 90vh;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #eaf1fb;
+}
+.deviceNetwork.dark {
+  background-color: var(--dark-secondary-color);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  pointer-events: auto;
+}
+.deviceNetworkBtns {
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+.deviceNetworkBtn {
+  width: fit-content;
+  padding-left: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-radius: var(--button-border-radius);
+  font-weight: 600;
+  padding-right: 10px;
+  background-color: var(--light-button-color);
+}
+.deviceNetworkBtn.dark {
+  color: var(--black-color);
+}
+.deviceNetworkTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 96%;
+  height: 80%;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  background-color: #eaf1fb !important;
+}
+.deviceNetworkTable.dark {
+  background-color: var(--dark-secondary-color) !important;
+}
+.deviceNetworkTableData.dark {
+  color: white;
+}
+.deviceNetworkTableHeader {
+  background-color: #d3e3fd !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+.deviceNetworkTableHeader.dark {
+  background-color: #d3e3fd;
+}
+.deviceNetworkTablePagination.dark {
+  background-color: #d3e3fd;
+  bottom: 0;
+}
+.deviceNetworkDevicesBtn {
+  background-color: var(--light-button-color);
+  width: fit-content;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+.deviceNetworkDevicesBtn.dark {
+    color: var(--black-color);
+}

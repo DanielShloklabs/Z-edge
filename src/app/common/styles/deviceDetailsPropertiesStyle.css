@@ -1,0 +1,28 @@
+.deviceDetailsPropertiesContent {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.deviceDetailsPropertiesGroup {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.deviceDetailsPropertiesLabel {
+  flex: 1.5;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.deviceDetailsPropertiesData {
+  flex: 2;
+  text-align: left;
+  font-size: 18px;
+}

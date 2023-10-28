@@ -2,6 +2,7 @@ import React from "react";
 import { useTheme } from "../../../../../common/theme/themeContext";
 import "../../../../../common/styles/licenseSettingsStyle.css";
 import { GoDotFill } from "react-icons/go";
+import formatCurrentDateTime from "../../../../../common/utils/formattedDateTime";
 
 const LicenseSettings = () => {
   const { isDarkMode } = useTheme();
@@ -28,7 +29,7 @@ const LicenseSettings = () => {
         </div>
         <div className="licenseSettingsGroup">
           <p className="label">License Validity :</p>
-          <p className="data">{Date.now()}</p>
+          <p className="data">{formatCurrentDateTime()}</p>
         </div>
         <div className="licenseSettingsGroup">
           <p className="label">License Details :</p>

@@ -1,0 +1,23 @@
+.deviceDetailsNavigator {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.deviceDetailsNavigatorOption {
+    background-color: var(--light-background-color);
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.deviceDetailsNavigatorOption.dark {
+    color: black;
+}
+.deviceDetailsNavigatorOption.selected {
+    background-color: var(--light-heading-color);
+    font-weight: 600;
+}
