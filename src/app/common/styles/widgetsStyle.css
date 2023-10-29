@@ -21,8 +21,39 @@
 }
 .widgetsContent {
   display: flex;
-  height: 90%;
-  text-align: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
   justify-content: center;
+  height: 90%;
+}
+.widgetsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 60px;
+  justify-content: center;
+}
+.widget {
+  justify-items: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+}
+.widget.dark {
+  background-color: var(--dark-background-color);
+}
+.widget p {
+  margin: auto;
+  font-size: 12px;
+}
+
+.widgetIcon {
+  margin: auto;
 }

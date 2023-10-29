@@ -1,0 +1,20 @@
+.lineChart {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background-color: white;
+  }
+  .lineLabel {
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-top: -10px;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+  }
+  .line {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  

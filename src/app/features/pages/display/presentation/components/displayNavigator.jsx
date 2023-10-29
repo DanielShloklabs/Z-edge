@@ -3,7 +3,7 @@ import "../../../../../common/styles/displayNavigatorStyle.css";
 import { useTheme } from "../../../../../common/theme/themeContext";
 import { useMenu } from "../../../../../common/utils/menuContext";
 
-const DisplayNavigator = ({ list }) => {
+const DisplayNavigator = ({ dashboards, handleLoadDashboard }) => {
   const { isDarkMode } = useTheme();
   const { open } = useMenu();
   return open ? (
@@ -12,8 +12,14 @@ const DisplayNavigator = ({ list }) => {
         Display Navigator
       </div>
       <div className="displayNavigatorContent">
-        {list.map((number) => (
-          <li key={number}>{number}</li>
+        {dashboards.map((dashboard, index) => (
+          <li
+            key={`dashboard-${index}`}
+            id={`${dashboard.name}-page`}
+            onClick={() => handleLoadDashboard(dashboard)}
+          >
+            {dashboard.name}
+          </li>
         ))}
       </div>
     </div>
