@@ -22,6 +22,8 @@ import DisplayNavigator from "./components/displayNavigator";
 import MiniWidgets from "./components/miniWidgets";
 import Widgets from "./components/widgets";
 import { useEffect } from "react";
+import { useTheme } from "../../../../common/theme/themeContext";
+import axios from "axios";
 
 const Dashboardwidgets = [
   {
@@ -59,13 +61,7 @@ const Dashboardwidgets = [
 ];
 
 const Display = () => {
-  const dashboardList = [
-    "Dashboard1",
-    "Dashboard2",
-    "Dashboard3",
-    "DashBoard4",
-    "DashBoard5",
-  ];
+  const { isDarkMode } = useTheme();
   const [draggedItem, setDraggedItem] = useState(null);
   const [widgetContainerDragStarted, setWidgetContainerDragStarted] =
     useState(false);
@@ -77,25 +73,6 @@ const Display = () => {
   const [view, setView] = useState("Edit");
 
   const serverEndpoint = process.env.REACT_APP_SERVER_ENDPOINT;
-
-  useEffect(() => {
-    const savedDashboards =
-      JSON.parse(localStorage.getItem("dashboards")) || [];
-    setDashboards(savedDashboards);
-  }, []);
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.ctrlKey && e.key === "s") {
-        e.preventDefault();
-        setIsPopupOpen(true);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
   const handleReorderWidgets = (dragIndex, dropIndex) => {
     const updatedItems = [...droppedItems];
     const [draggedItem] = updatedItems.splice(dragIndex, 1);
@@ -118,6 +95,63 @@ const Display = () => {
   const handleLoadDashboard = (dashboard) => {
     setDroppedItems(dashboard.widgets);
   };
+  useEffect(() => {
+    const savedDashboards =
+      JSON.parse(localStorage.getItem("dashboards")) || [];
+    setDashboards(savedDashboards);
+  }, []);
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && e.key === "s") {
+        e.preventDefault();
+        setIsPopupOpen(true);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+  const generateBarChartData = () => {
+    const data = [];
+    for (let i = 0; i < 5; i++) {
+      data.push({
+        label: `Category ${i + 1}`,
+        value: Math.floor(Math.random() * 100),
+      });
+    }
+    return data;
+  };
+
+  const fetchDeviceList = async () => {
+    try {
+      const response = await axios.get(
+        `${serverEndpoint}/fetch_bacnet_objects_properties`
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching device list:", error);
+      return [];
+    }
+  };
+  useEffect(() => {
+    const fetchDataWithDelay = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      const deviceList = await fetchDeviceList();
+      setDeviceList(deviceList);
+    };
+
+    fetchDataWithDelay();
+  }, [deviceList]);
+
+  const generateKPIChartData = () => {
+    const data = [10, 20, 30];
+    return data;
+  };
+
+  const barChartData = generateBarChartData();
+  const kpiChartData = generateKPIChartData();
 
   const handleDragStartWidgetContainer = (e, item) => {
     e.dataTransfer.setData("item", JSON.stringify(item));
@@ -149,7 +183,6 @@ const Display = () => {
   const handleCanvasDrop = (e) => {
     e.preventDefault();
     const item = JSON.parse(e.dataTransfer.getData("item"));
-    console.log(item);
     if (!droppedItems.some((widget) => widget.id === item.id)) {
       setDroppedItems([...droppedItems, item]);
       setDraggedItem(null);
@@ -166,7 +199,7 @@ const Display = () => {
   };
   const componentMapping = {
     bar: <BarChart />,
-    kpi: <KPIChart view={view} />,
+    kpi: <KPIChart data={kpiChartData} deviceList={deviceList} view={view} />,
     line: <LineChart />,
     gauge: <GuageChart />,
     numeric: <NumericWidget />,
@@ -210,7 +243,7 @@ const Display = () => {
       )}
 
       {isPopupOpen ? (
-        <div className="saveDialog">
+        <div className={`saveDialog ${isDarkMode ? "dark" : ""}`}>
           <div className="saveHeading">Save Dashboard</div>
           <input
             type="text"

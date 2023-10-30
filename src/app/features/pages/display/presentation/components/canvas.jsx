@@ -14,6 +14,7 @@ const Canvas = ({
   setView,
   componentMapping,
   handleDelete,
+  setDroppedItems,
   handleDragStartCanvas,
   handleReorderWidgets,
 }) => {
@@ -24,6 +25,33 @@ const Canvas = ({
   const handleView = () => {
     setView("View");
   };
+
+  const handleWidgetDrag = (e, item) => {
+    e.preventDefault();
+    if (view === "Edit") {
+      handleDragStartCanvas(e, item);
+    }
+  };
+
+  const handleWidgetDrop = (e, index, itemId) => {
+    e.preventDefault();
+    if (view === "Edit") {
+      handleReorderWidgets(index, parseInt(itemId.split("-")[1]));
+    }
+  };
+
+  const handleWidgetResize = (e, index, d, item) => {
+    const newItem = { ...item };
+    newItem.size = {
+      width: item.size.width + d.width,
+      height: item.size.height + d.height,
+    };
+
+    const updatedItems = [...droppedItems];
+    updatedItems[index] = newItem;
+    setDroppedItems(updatedItems);
+  };
+
   return (
     <div className={`canvas ${isDarkMode ? "dark" : ""}`}>
       <div
@@ -37,19 +65,14 @@ const Canvas = ({
             key={index}
             draggable={view === "View" ? false : true}
             id={`widget-${item.id}`}
-            onDragStart={(e) =>
-              view === "View" ? null : handleDragStartCanvas(e, item)
-            }
+            onDragStart={(e) => handleWidgetDrag(e, item)}
             onDragOver={(e) => e.preventDefault()}
-            onDrop={(e) => {
-              e.preventDefault();
-              handleReorderWidgets(index, parseInt(e.target.id.split("-")[1]));
-            }}
+            onDrop={(e) => handleWidgetDrop(e, index, `widget-${item.id}`)}
           >
             {view === "View" ? (
               <div>{componentMapping[item.id]}</div>
             ) : (
-              <Resizable >
+              <Resizable className="widgetComponent">
                 <button
                   className="displayRemoveWidget"
                   onClick={() => handleDelete(index)}
@@ -63,11 +86,17 @@ const Canvas = ({
         ))}
       </div>
       {view === "View" ? (
-        <div className="canvasEditViewBtn" onClick={handleEdit}>
+        <div
+          className={`canvasEditViewBtn ${isDarkMode ? "dark" : ""}`}
+          onClick={handleEdit}
+        >
           Edit
         </div>
       ) : (
-        <div className="canvasEditViewBtn" onClick={handleView}>
+        <div
+          className={`canvasEditViewBtn ${isDarkMode ? "dark" : ""}`}
+          onClick={handleView}
+        >
           View
         </div>
       )}
@@ -76,13 +105,3 @@ const Canvas = ({
 };
 
 export default Canvas;
-
-/* <button onClick={onAddItem}>Add Item</button>
-        <ResponsiveReactGridLayout
-          onLayoutChange={(layout) => console.log(layout)}
-          cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
-          rowHeight={100}
-          className="gridLayout"
-        >
-          {items.map((el) => createElement(el))}
-        </ResponsiveReactGridLayout> */

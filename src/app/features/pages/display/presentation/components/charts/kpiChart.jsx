@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../../../../../../common/styles//kpiChartStyle.css";
 import GaugeChart from "react-gauge-chart";
+import { useTheme } from "../../../../../../common/theme/themeContext";
 
 const KPIChart = ({ data, deviceList, view }) => {
   const chartContainerRef = useRef(null);
   const [chartWidth, setChartWidth] = useState(0);
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
@@ -29,14 +31,16 @@ const KPIChart = ({ data, deviceList, view }) => {
   }, []);
 
   return (
-    <div className="kpi-chart" ref={chartContainerRef}>
-      <p className="kpi-label">Device 01</p>
+    <div
+      className={`kpiChart ${isDarkMode ? "dark" : ""}`}
+      ref={chartContainerRef}
+    >
+      <p className="kpiLabel">Device 01</p>
       <div className="kpi">
         <GaugeChart
-          id="kpi-chart"
           nrOfLevels={20}
           percent={`0.15`}
-          textColor="black"
+          textColor={isDarkMode ? "white" : "black"}
           formatTextValue={({ value }) => `15°C`}
           animate={false}
         />

@@ -10,12 +10,13 @@
   background-color: var(--dark-secondary-color);
 }
 .canvasContent {
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   overflow: scroll;
-  height: 90vh;
+  height: 85vh;
 }
 
 .grid-item {
@@ -46,7 +47,15 @@ button:hover {
 }
 .droppedItem {
   margin: 10px;
-  flex-wrap: wrap;
+}
+.widgetComponent {
+  display: flex;
+  object-fit: cover;
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 7px;
+  margin: 10px;
 }
 .displayRemoveWidget {
   position: absolute;
@@ -69,10 +78,13 @@ button:hover {
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 15px;
+  font-weight: 600;
   font-size: 16px;
   border-radius: 10px;
 }
-
+.canvasEditViewBtn.dark {
+  color: var(--black-color);
+}
 .saveDialog {
   position: absolute;
   display: flex;
@@ -82,6 +94,9 @@ button:hover {
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: rgb(255, 255, 255);
+}
+.saveDialog.dark {
+  background-color: var(--dark-background-color);
 }
 .saveHeading {
   font-size: 18px;
@@ -105,6 +120,7 @@ button:hover {
 .saveDialogBtns div {
   padding-left: 10px;
   padding-right: 10px;
+  cursor: pointer;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 20px;

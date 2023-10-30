@@ -1,20 +1,20 @@
-.kpi-chart {
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
-    background-color: white;
-  }
-  .kpi-label {
-    background-color: var(--primary-color);
-    padding: 10px;
-    margin-top: -10px;
-    border-radius: 10px 10px 10px 10px;
-    font-size: 1.3rem;
-    color: white;
-    font-weight: 600;
-  }
-  .kpi {
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
+.kpiChart {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+}
+.kpiChart.dark {
+  background-color: var(--dark-background-color);
+}
+.kpiLabel {
+  padding: 10px;
+  margin-top: -10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+.kpi {
+  min-width: 100%;
+  min-height: 100%;
+}

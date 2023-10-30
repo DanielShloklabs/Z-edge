@@ -1,9 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "../../../../../../common/styles/lineChartStyle.css";
 import { Line } from "react-chartjs-2";
-import { useRef } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useTheme } from "../../../../../../common/theme/themeContext";
 
 const LineChart = () => {
   const labels = ["January", "February", "March", "April", "May", "June"];
@@ -19,36 +18,12 @@ const LineChart = () => {
       },
     ],
   };
-  const chartContainerRef = useRef(null);
-  const [chartWidth, setChartWidth] = useState(0);
+  const { isDarkMode } = useTheme();
 
-  useEffect(() => {
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        if (entry.contentBoxSize) {
-          setChartWidth(entry.contentBoxSize[0].inlineSize);
-        } else {
-          setChartWidth(entry.contentRect.width);
-        }
-      }
-    });
-
-    if (chartContainerRef.current) {
-      resizeObserver.observe(chartContainerRef.current);
-    }
-
-    return () => {
-      if (chartContainerRef.current) {
-        resizeObserver.unobserve(chartContainerRef.current);
-      }
-    };
-  }, []);
   return (
-    <div className="lineChart" ref={chartContainerRef}>
+    <div className={`lineChart ${isDarkMode ? "dark" : ""}`}>
       <p className="lineLabel">Data for 10 Days</p>
-      <div className="line">
-        <Line data={data} />
-      </div>
+      <Line className="chart" data={data} />
     </div>
   );
 };
